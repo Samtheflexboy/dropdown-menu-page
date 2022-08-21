@@ -1,0 +1,322 @@
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+    *{
+        margin: 0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Epilogue', 'Arial Narrow', Arial, sans-serif ;
+    }
+    html {
+    font-size: 62.5%;
+    }
+    .wrapper {
+        padding:0 4rem ;
+        height: 100vh;
+    }
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 3rem 0;
+    }
+    .logo {
+       max-width: 6rem;
+    }
+    .left-area {
+        display: flex;
+        gap:5rem;
+        align-items: center;
+    }
+    nav ul{
+        display: flex;
+    }
+    nav ul li {
+        list-style: none;
+        margin-right: 2.3rem;
+    } 
+    nav ul li a {
+        text-decoration: none;
+        color:hsl(0, 0%, 41%);
+        font-size: clamp(.7rem,1.8rem,1.5rem);
+    }
+    nav ul li a:hover {
+        color:hsl(0, 3%, 12%);
+        cursor:pointer;
+    }
+    li {
+        display: flex;
+        align-items: center;
+    }
+    .nav-area
+    {
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: space-between;
+        align-items: center;
+    }
+    .right-area{
+        display: flex;
+        align-items: center;
+    }
+    .arrow-1 a,.arrow-2 a {
+        margin-right: .8rem;
+    }
+    .right-area > p {
+        font-size: 1.5rem;
+        color:hsl(0, 0%, 41%);
+        margin-right:2.5rem ;
+    }
+    .right-area  p:hover {
+        color:hsl(0, 3%, 12%);
+        cursor: pointer;
+    }
+    .login {
+    padding: .8rem 1.8rem;
+    border-radius: 12px;
+    background-color:transparent;
+    border: 2px solid hsl(0, 0%, 61%); 
+    }
+    .right-area .login:hover {
+    border:2px solid hsl(0, 3%, 12%); 
+    }
+    .menu {
+        display: none;
+    }
+    /* // main area starts here  */
+    .row1{
+        display: flex;
+        margin-left: 12rem;
+        font-family: Epilogue;
+    }
+            /* some thing so you don't get confused  */
+    /* here you'll learn how i write css for columns */
+    /* flex bases gives for responsivenes */
+    /* clamp is a modren technique for typography 
+    basically we give minimun prefered and max vlau */
+    .col1{
+        flex-basis: 50%;
+        margin-top:8rem;
+    }
+    .col1 > h1 {
+        font-size: clamp(4rem,5.5vw,15vw);
+        line-height: .8;
+        margin-bottom: clamp(2rem,6vh,12vh);
+    }
+    .col1 > p{
+        font-size: clamp(1.6rem,2rem,2vw);
+        color:hsl(0, 0%, 41%);
+    }
+    .col2 {
+        display: flex;
+        flex-basis:50% ;
+        justify-content: center;
+    }
+    .hero-icon {
+        /* width:clamp(10rem,32rem,35rem); */
+        width:clamp(30%,55%,60%);
+        /* width: min(20vw,80%); */
+        /* max-height: 30rem; */
+        /* object-fit: cover; */
+    }
+    .learn-button{
+        margin-top: 5rem;
+        background-color: hsl(0, 0%, 8%);
+        border: none;
+        border-radius:10px;
+        padding: 1.2rem 2.1rem;
+        color: white;
+        font-weight: bold;
+        font-family:'Epilogue';
+        margin-bottom: 5rem;
+    }
+    .learn-button:hover {
+        background-color: transparent;
+        color: black;
+        border: 1px solid black;
+    }
+    /* // basiclly i've used here pseudon class so that i can select them withot writng code again and again  */
+    .brands-icons img:nth-child(1),img:nth-child(3),img:nth-child(4) {
+        width: clamp(5rem,10vw,10rem);
+        margin-right: 4rem;
+    }
+    .brands-icons img:nth-child(2) {
+        max-width:clamp(2.5rem,5vw,8rem);
+        margin-right: 4rem;
+    }
+    .brands-icons {
+        display: flex;
+        align-items: center;
+    }
+    /* drop menus starts from here  */
+    ul li:nth-child(1){
+        position: relative;
+    }
+    .menu1{
+        position: absolute;
+        top: 3rem;
+        left: -6rem;
+        background-color: hsl(0, 0%, 98%);
+        padding: 1rem 2.5rem;
+        padding-top: 2rem;
+        border-radius: .7rem;
+        box-shadow: rgba(149, 157, 165, 0.18) 0px 8px 15px; 
+        transition: scale 0.5s;
+    }
+
+    .menu-area.open-menu {
+        display:flex;
+
+    }
+    .sub-menu {
+        display: flex;
+        justify-content: start;
+        padding-bottom: 1rem;
+        transition: transform 0.5s;
+    }
+    .sub-menu img {
+        margin-right: 1.5rem;
+        object-fit: cover;
+    
+    }
+    .sub-menu:hover {
+        cursor: pointer;
+        transform: translateX(1rem) ;
+    }
+    .sub-menu > p {
+        font-size: 1.3rem;
+        color:hsl(0, 0%, 41%);
+        font-family: 'Epilogue',Arial, Helvetica, sans-serif;
+    }
+    .arrow-1 img {
+    cursor: pointer;
+    }
+    .menu-area{
+        display: none;
+    }
+    ul li:nth-child(2){
+        position: relative;
+    }
+    .menu-area-2{
+       display: none;
+    }
+    .menu2 {
+        position: absolute;
+        top: 3rem;
+        left: 2rem;
+        background-color: hsl(0, 0%, 98%);
+        border-radius: .7rem;
+        box-shadow: rgba(149, 157, 165, 0.18) 0px 8px 15px;  
+    }
+    .sub-divs> p {
+        font-size: 1.5rem;
+        color:hsl(0, 0%, 41%);
+        font-weight: 500;
+    }
+    .sub-divs {
+        padding: 2rem 3rem;
+    }
+    .sub-divs p:nth-child(1){
+       margin-bottom: .5rem;
+    }
+    .menu-area-2.open-menu-two {
+        display: flex;
+    }
+    .arrow-2  img {
+       cursor: pointer;
+    }
+    .mobile-design {
+        display: none;
+    }
+    @media (max-width:900px) {
+        html {
+            /* font-size: 80%; */
+        }
+        .row1 {
+            margin-left: 0;
+        }
+    }
+    @media (max-width:760px) {
+        html {
+            font-size: 62%;
+        }
+        .login {
+            padding: .8rem .8rem;
+            font-size: 1rem;
+            border-radius: 9px;
+        }
+        .logo {
+            width: 4rem;
+        }
+        nav ul li {
+            margin-right: 1rem;
+        }
+        .learn-button {
+            font-size: 1rem;
+            padding: 1rem 1.2rem;
+        }
+        .brands-icons img:nth-child(1),img:nth-child(3),img:nth-child(4),.img:nth-child(2) {
+            margin-right: 2rem;
+        }
+    }
+    @media (max-width:600px) {
+        html {
+            font-size: 60%;
+        }
+          header .menu  {
+            display: flex;
+            width:3rem;
+            cursor: pointer;
+            margin:0;
+          }
+          .logo {
+            width: 5rem;
+          }
+        header {
+            padding: 2rem 1rem;
+            margin-bottom: 2rem;
+        }
+        .mobile-design {
+            display: flex;
+            margin-bottom: 3rem;
+        }
+        .row1 {
+            flex-direction: column-reverse;
+        }
+        .mobile-design {
+           width: 100%;
+        }
+        .hero-icon {
+            display: none;
+        }
+        nav , .right-area {
+            display: none;
+        }
+        .wrapper {
+            padding:0 0;
+        }
+        .col1 {
+            flex-basis: 100%;
+            margin-top: 0;
+            text-align: center;
+            margin: 2.1rem;
+            list-style:2 ;
+        }
+         .col1 h1{
+            margin-bottom: 1rem;
+        }
+        .col1 .learn-button 
+        {
+            margin-top: 2rem;
+            margin-bottom: 4rem;
+        }
+        .brands-icons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .brands-icons img:nth-child(1),img:nth-child(3),img:nth-child(4){
+            margin-right: 2rem;
+            /* width: 48em; */
+        }
+    }
+      
