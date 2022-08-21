@@ -1,0 +1,117 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fronend mentor project</title>
+    <link rel="shortcut icon" href="/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="styleofproject.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>   
+
+    <!-- // Header sections starts -->
+    <div class="wrapper">
+        <header>
+            <div class="left-area">
+                <img src="/images/logo.svg" alt="logo" class="logo">
+                <nav>
+                    <ul>
+                        <li class="arrow-1" >
+                            <a href="">Feature</a>
+                            <img src="/images/icon-arrow-down.svg" alt=""
+                            onclick="openfeature()"
+                            class="arrow-iocn-1">
+
+                            <div class="menu-area" id="menulist" >
+
+                            <div class="menu1"  >
+                              <div class="sub-menu">
+                                <img src="/images/icon-todo.svg" alt="todolist">
+                                <p>Todo list</p>
+                              </div>
+
+                              <div class="sub-menu">
+                                <img src="/images/icon-calendar.svg" alt="todolist">
+                                <p>calander</p>
+                              </div>
+
+                              <div class="sub-menu">
+                                <img src="/images/icon-reminders.svg" alt="todolist">
+                                <p>remaning</p>
+                              </div>
+
+                              <div class="sub-menu">
+                                <img src="/images/icon-planning.svg" alt="todolist">
+                                <p>palnning</p>
+                              </div>
+                            </div>
+                        </div>
+                        </li>
+                        
+                        <li class="arrow-2">
+                            <a href="">compnay</a>
+                            <img src="/images/icon-arrow-down.svg" alt="" class="arrow-icon"
+                            onclick="abouts()"
+                            >
+                           <div class="menu-area-2" id="menulisttwo">
+                            <div class="menu2" >
+                                <div class="sub-divs">
+                                    <p>History</p>
+                                    <p>Team</p>
+                                </div>
+                            </div>
+                        </div>
+                        </li>
+                        <li><a href="">Careers</a></li>
+                        <li><a href="">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="right-area">
+                <p>login</p>
+                <button type="submit" class="login">Register</button>
+            </div>
+            <img src="/images/icon-menu.svg" alt="" class="menu">
+        </header>
+        <div class="row1">
+            <div class="col1">
+                <h1>
+                    Make  remote work
+                </h1>
+                <p>
+                    Get your team in sync, no matter your location. <br> Streamline processes, 
+                    create team rituals, and watch <br> productivity soar.
+                </p>
+                <button class="learn-button" type="button">Learn more</button>
+                 <div class="brands-icons">
+                    <img src="/images/client-databiz.svg" alt="" class=brands-icon"">
+                    <img src="/images/client-audiophile.svg" alt="" class="brands-icon">
+                    <img src="/images/client-meet.svg" alt="" class=brands-icon"">
+                    <img src="/images/client-maker.svg" alt="" class="brands-icon">    
+                 </div>
+               </div>
+             <div class="col2">
+            <img src="/images/image-hero-desktop.png" alt="" class="hero-icon">
+            <img src="/images/image-hero-mobile.png" alt="" class="mobile-design"> 
+          </div>
+        </div>
+    </div> 
+    <script>
+    //    view section 
+      let menulist=document.getElementById('menulist');
+
+      function openfeature() {
+        menulist.classList.toggle("open-menu");
+      }
+      // second 
+      let menulisttwo=document.getElementById('menulisttwo');
+
+      function abouts() {
+        menulisttwo.classList.toggle("open-menu-two")
+      }
+    </script>  
+</body>
+</html>
